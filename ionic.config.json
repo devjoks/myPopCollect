@@ -1,0 +1,7 @@
+{
+  "name": "myPopCollect",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
