@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="!loading">
+    <ion-item *ngFor="let pop of popList">
+      <ion-thumbnail item-start>
+        <img [src]="pop.imageURL">
+      </ion-thumbnail>
+      <h2>{{ pop.name }}</h2>
+      <p>Price: {{ pop.price }}</p>
+      <ion-thumbnail item-end>
+        <img [src]="pop.imageExcluse">
+      </ion-thumbnail>
+    </ion-item>
+  </ion-list>
+  <p *ngIf="loading">Cargando ...</p>
+  <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
+</ion-content>
